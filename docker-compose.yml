@@ -31,7 +31,7 @@ services:
       SERVICE_TAGS: dev
       SERVICE_NAME: mysql_mppl
 
-  mppl_nginx:
+  mppl_nginx: 
     build: ./nginx
     image: mppl_nginx:latest
     container_name: mppl_nginx
