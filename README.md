@@ -1,5 +1,3 @@
 # MPPL
 Project MPPL - team-collaboration
-testing 
-daus
-ditto tampan 
+Gibran Daus Ditto
