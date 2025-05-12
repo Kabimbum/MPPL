@@ -14,6 +14,12 @@ class ListMahasiswas extends ListRecords
     {
         return [
             Actions\CreateAction::make(),
+            Actions\Action::make('cetak_semua_ktm')
+                ->label('Cetak Semua KTM')
+                ->icon('heroicon-o-printer')
+                ->url(route('mahasiswa.cetak.semua'))
+                ->openUrlInNewTab()
+                ->color('success'),
         ];
     }
 }

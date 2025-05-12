@@ -17,4 +17,8 @@ class Mahasiswa extends Model
         'image',
         'tanggal_lahir',
     ];
+
+    protected $casts = [
+        'tanggal_lahir' => 'datetime',
+    ];
 }

@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use Livewire\Livewire;
+use App\Http\Controllers\KtmController;
+
 
 /* NOTE: Do Not Remove
 / Livewire asset handling if using sub folder in domain
@@ -19,3 +21,10 @@ Livewire::setScriptRoute(function ($handle) {
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/admin/mahasiswa/cetak-semua', [KtmController::class, 'cetakSemua'])->name('mahasiswa.cetak.semua');
+Route::get('/admin/mahasiswa/{mahasiswa}/cetak', [KtmController::class, 'cetakSatu'])->name('mahasiswa.cetak.ktm');
+
+
+
