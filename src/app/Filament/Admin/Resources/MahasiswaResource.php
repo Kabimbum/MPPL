@@ -14,7 +14,11 @@ class MahasiswaResource extends Resource
 {
     protected static ?string $model = Mahasiswa::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-user-group';
+
+    // Masukin ke grup dropdown yang sama
+    protected static ?string $navigationGroup = 'Manajemen Mahasiswa';
+
     protected static ?string $navigationLabel = 'Mahasiswa';
 
     public static function form(Form $form): Form
@@ -45,6 +49,7 @@ class MahasiswaResource extends Resource
             ->filters([])
             ->actions([
                 Tables\Actions\EditAction::make(),
+
                 Tables\Actions\Action::make('cetak_ktm')
                     ->label('Cetak KTM')
                     ->icon('heroicon-o-printer')
@@ -53,9 +58,7 @@ class MahasiswaResource extends Resource
                     ->color('success'),
             ])
             ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
-                ]),
+                Tables\Actions\DeleteBulkAction::make(),
             ]);
     }
 
@@ -70,6 +73,14 @@ class MahasiswaResource extends Resource
             'index' => Pages\ListMahasiswas::route('/'),
             'create' => Pages\CreateMahasiswa::route('/create'),
             'edit' => Pages\EditMahasiswa::route('/{record}/edit'),
+        ];
+    }
+
+    // DAFTARKAN WIDGET DI RESOURCE
+    public static function getWidgets(): array
+    {
+        return [
+            \App\Filament\Admin\Resources\MahasiswaResource\Widgets\TotalMahasiswa::class,
         ];
     }
 }

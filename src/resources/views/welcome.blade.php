@@ -49,6 +49,12 @@
                 Login Mahasiswa
             </a>
 
+            <a href="{{ route('ktmrequest.form') }}"
+               class="w-full sm:w-auto px-6 py-3 text-[#004aad] border border-[#004aad] hover:bg-[#f2f6ff] rounded-lg text-center font-semibold shadow-md transition">
+                Registrasi KTM
+            </a>
+
+
             <!-- Tombol Login Admin Disembunyikan tapi masih aktif -->
             @if (Route::has('filament.admin.auth.login'))
                 @auth
@@ -58,6 +64,16 @@
                 @endauth
             @endif
         </div>
+
+        <div class="text-center mt-4 d-flex justify-content-between">
+            <button type="button" class="btn btn-secondary px-4" onclick="history.back()">
+                Kembali
+             </button>
+            <button type="submit" class="btn btn-primary px-4">
+            Kirim Permintaan
+    </button>
+</div>
+
     </div>
 
     <!-- Shortcut ALT + A -->

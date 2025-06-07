@@ -5,6 +5,7 @@ use Livewire\Livewire;
 use App\Http\Controllers\KtmController;
 use App\Http\Controllers\MahasiswaLoginController;
 use App\Http\Controllers\MahasiswaController;
+use App\Http\Controllers\PublicKtmRequestController;
 
 Livewire::setUpdateRoute(function ($handle) {
     return Route::post(config('app.asset_prefix') . '/livewire/update', $handle);
@@ -36,3 +37,6 @@ Route::post('/mahasiswa/login', [MahasiswaLoginController::class, 'login'])->nam
 // Protected KTM view (only for authenticated mahasiswa)
 // REMOVE the 'mahasiswa.auth' middleware from this route
 Route::get('/mahasiswa/ktm', [MahasiswaLoginController::class, 'showKTM'])->name('mahasiswa.ktm');
+
+Route::get('/ktmrequest-form', [PublicKtmRequestController::class, 'create'])->name('ktmrequest.form');
+Route::post('/ktmrequest-form', [PublicKtmRequestController::class, 'store'])->name('ktmrequest.store');

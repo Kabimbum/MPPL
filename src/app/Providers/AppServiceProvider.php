@@ -3,6 +3,8 @@
 namespace App\Providers;
 
 use App\Policies\ActivityPolicy;
+use App\Models\KtmRequest;
+use App\Observers\KtmRequestObserver;
 use Filament\Actions\MountableAction;
 use Filament\Notifications\Livewire\Notifications;
 use Filament\Notifications\Notification;
@@ -29,6 +31,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        // Daftarkan observer
+        KtmRequest::observe(KtmRequestObserver::class);
+
         Gate::policy(Activity::class, ActivityPolicy::class);
         Page::formActionsAlignment(Alignment::Right);
         Notifications::alignment(Alignment::End);
