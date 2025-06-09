@@ -65,13 +65,6 @@
             @endif
         </div>
 
-        <div class="text-center mt-4 d-flex justify-content-between">
-            <button type="button" class="btn btn-secondary px-4" onclick="history.back()">
-                Kembali
-             </button>
-            <button type="submit" class="btn btn-primary px-4">
-            Kirim Permintaan
-    </button>
 </div>
 
     </div>
