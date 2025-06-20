@@ -13,9 +13,9 @@
     <h1 class="text-center my-4">Daftar Kartu Tanda Mahasiswa</h1>
 
 
-    <div class="download-btn">
-  <button onclick="downloadAllKTMs()">Download Semua KTM</button>
-</div>
+        <div class="download-btn">
+             <button onclick="downloadAllKTMs()">Download Semua KTM</button>
+        </div>
 
 
     <div class="ktm-card-container">
@@ -37,7 +37,7 @@
                 </div>
 
                 <div class="ktm-footer">
-                    <p><small>Kabimbums's small project made with love</small></p>
+                    <p><small>identika</small></p>
                 </div>
             </div>
 

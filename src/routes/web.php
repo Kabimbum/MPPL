@@ -40,3 +40,8 @@ Route::get('/mahasiswa/ktm', [MahasiswaLoginController::class, 'showKTM'])->name
 
 Route::get('/ktmrequest-form', [PublicKtmRequestController::class, 'create'])->name('ktmrequest.form');
 Route::post('/ktmrequest-form', [PublicKtmRequestController::class, 'store'])->name('ktmrequest.store');
+
+Route::get('/mahasiswa/logout', function () {
+    Session::forget('mahasiswa_id');
+    return redirect()->route('mahasiswa.login.form')->with('success', 'Anda berhasil logout.');
+})->name('mahasiswa.logout');
