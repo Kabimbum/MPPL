@@ -37,7 +37,7 @@
                 Sistem Identitas Digital Akademik &bull; 
                 <span class="font-semibold text-[#004aad]">MPPL</span> 
                 <span class="font-semibold text-[#004aad]">2025</span> &bull; 
-                <span class="text-gray-700">Pengembang: DIGIDA</span>
+                <span class="text-gray-700">Pengembang: DIGIDAU</span>
             </p>
         </div>
 
@@ -46,7 +46,7 @@
             <!-- Tombol Login Mahasiswa -->
             <a href="{{ route('mahasiswa.login.form') }}"
                class="w-full sm:w-auto px-6 py-3 text-white bg-[#004aad] hover:bg-[#00398a] rounded-lg text-center font-semibold shadow-md transition">
-                Login Mahasiswa
+                Cetak KTM
             </a>
 
             <a href="{{ route('ktmrequest.form') }}"

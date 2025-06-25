@@ -27,7 +27,7 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                       d="M5.121 17.804A13.937 13.937 0 0112 15c2.09 0 4.064.48 5.879 1.335M15 12a3 3 0 11-6 0 3 3 0 016 0zm6 0a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
-            <h2 class="text-2xl font-bold text-[#004aad] mt-2">Login Mahasiswa</h2>
+            <h2 class="text-2xl font-bold text-[#004aad] mt-2">Cetak KTM</h2>
         </div>
 
         {{-- Error Messages --}}
