@@ -61,7 +61,7 @@
             <!-- Tanggal Lahir -->
             <div>
                 <label for="tanggal_lahir" class="block text-sm font-medium text-gray-700">Tanggal Lahir</label>
-                <input type="password" name="tanggal_lahir" id="tanggal_lahir" required
+                <input type="text" name="tanggal_lahir" id="tanggal_lahir" required
                        class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-[#004aad] focus:border-[#004aad]"
                        placeholder="YYYY-MM-DD">
                 <p class="text-xs text-gray-500 mt-1">Gunakan format YYYY-MM-DD sebagai password.</p>
